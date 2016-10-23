@@ -1,0 +1,26 @@
+<core:View 
+           xmlns:core="sap.ui.core" 
+           xmlns:mvc="sap.ui.core.mvc" 
+           xmlns="sap.m"
+		   controllerName="sns.basis.nav1.controller.employee.EmployeeList" 
+		   xmlns:html="http://www.w3.org/1999/xhtml">
+		   
+		   <Page id="employeeListPage" title="{i18n>EmployeeList}"
+		         showNavButton="true"
+		         navButtonPress="onNavBack"
+		         class="sapUiResponsiveContentPadding">
+
+		         <content>
+                        <List id="employeeList" headerText="{i18n>ListOfAllEmployees}" items="{/Employees}">
+                              <items>
+                                    <StandardListItem
+                                            title="{FirstName} {LastName}"
+                                            iconDensityAware="false"
+                                            iconInset="false"
+                                            type="Navigation"
+                                            press="onListItemPressed"/>
+                              </items>        
+                        </List>
+                </content>
+		   </Page>
+</core:View>

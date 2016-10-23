@@ -1,0 +1,7 @@
+<core:View 
+          xmlns:core="sap.ui.core" 
+          xmlns:mvc="sap.ui.core.mvc" 
+          xmlns="sap.m"
+          class="sapUiMediumMarginBotton">
+             <Title text="{i18n>EmployeeOverviewTop}" />
+</core:View>

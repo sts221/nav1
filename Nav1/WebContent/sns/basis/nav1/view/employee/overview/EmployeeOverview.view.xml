@@ -1,0 +1,15 @@
+<core:View 
+          xmlns:core="sap.ui.core" 
+          xmlns:mvc="sap.ui.core.mvc"
+          xmlns:l="sap.ui.layout" 
+          xmlns="sap.m"
+		  controllerName="sns.basis.nav1.controller.employee.overview.EmployeeOverview">
+          <Page id="EmployeeOverviewParent" title="{i18n>EmployeeOverview}"
+                showNavButton="true"
+                navButtonPress="onNavBack"
+                class="sapUiResponsiveContentPadding">
+                <content>
+                   <!--  CONTENT WILL BE INSERTED BY THE ROUTER --> 
+                </content>
+          </Page>
+</core:View>

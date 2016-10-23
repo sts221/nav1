@@ -1,0 +1,49 @@
+<core:View 
+        xmlns:core="sap.ui.core" 
+        xmlns:mvc="sap.ui.core.mvc" 
+        xmlns="sap.m"
+		controllerName="sns.basis.nav1.controller.employee.Resume" 
+		busyIndicatorDelay="0"
+		xmlns:html="http://www.w3.org/1999/xhtml">
+        <Page 
+              title="{i18n>ResumeOf} {FirstName} {LastName}"
+              id="employeeResumePage"
+              showNavButton="true"
+              navButtonPress="onNavBack"
+              class="sapUiResponsiveContentPadding">
+              
+              <content>
+                     <IconTabBar
+                          id="iconTabBar"
+                          class="sapUiResponsiveContentPadding"
+                          binding="{Resume}"
+                          select="onTabSelect"
+                          selectedKey="{view>/selectedTabKey}">
+                                   
+                          <items>
+                                <IconTabFilter id="infoTab" text="{i18n>Info}" key="Info" >
+                                       <Text text="Information" />
+                                </IconTabFilter>
+                                <IconTabFilter id="projectsTab" text="{i18n>Projects}" key="Projects">
+                                        <mvc:XMLView viewName="sns.basis.nav1.view.employee.ResumeProjects"></mvc:XMLView>
+                                </IconTabFilter>
+                                <IconTabFilter id="hobbiesTab" text="{i18n>Hobbies}" key="Hobbies">
+                                        <!--  Text will be placed via router mechanism - lazy loading-->
+                                </IconTabFilter>
+                                <IconTabFilter id="notesTab" text="{i18n>Notes}" key="Notes">
+                                        <!--  Text will be placed via router mechanism - lazy loading -->
+                                </IconTabFilter>
+                          </items>
+                                
+                                   
+                          
+                          
+                     </IconTabBar>
+             </content>
+              
+              
+              
+              
+              
+         </Page>
+</core:View>
